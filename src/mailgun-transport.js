@@ -160,7 +160,7 @@ MailgunTransport.prototype.send = function send(mail, callback) {
           return startsWith(key, prefix);
         });
       });
-
+      console.log('options', options)
       self.messages.send(options, function (err, data) {
         if (data) {
           data.messageId = data.id;
